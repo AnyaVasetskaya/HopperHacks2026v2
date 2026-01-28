@@ -11,11 +11,8 @@
     justify-content: flex-start;
     gap: 2rem; /* 👈 controls spacing */
     padding: 1rem 2rem;
-<<<<<<< HEAD
-=======
     position: relative;
     z-index: 100;
->>>>>>> 2a76519facf674ff8e31f2c7bdd990f0a968eeeb
 }
 
 .logo {
