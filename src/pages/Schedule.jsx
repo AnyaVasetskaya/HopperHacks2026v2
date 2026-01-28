@@ -1,11 +1,12 @@
 import React from 'react';
+import scheduleImage from "../assets/hh26_schedj_coming_soon.png"
 import './Pages.css';
 
 const Schedule = () => {
   return (
     <div>
       <p className='section-title'>~Schedule~</p>
-      <p className='section-text'>HopperHacks 2025 will begin SATURDAY, FEBRUARY 22nd at 10:00 AM and end on SUNDAY, FEBRUARY 23rd at 8:00 PM. Check back later for the full workshop/event schedule!</p>
+      <img className='schedule-image' src={scheduleImage} alt="wics logo"/>
     </div>
   );
 };

@@ -169,6 +169,14 @@
   }
 }
 
+.schedule-image {
+  width: 70vw;      /* 80% of the viewport width */
+  height: auto;     /* keeps aspect ratio */
+  max-width: 100%;  /* prevents overflow on small screens */
+  display: block;
+  margin: 0 auto;
+}
+
 /*
 .navigation ul{
   display: flex;
