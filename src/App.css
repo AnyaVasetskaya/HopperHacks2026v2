@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sancreek&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto+Slab:wght@700&display=swap');
 
 .apply-button {
   display: flex;
@@ -19,7 +19,7 @@
   background-position: center;
   border-color: transparent;
   border-radius: 20%;
-  font-family: 'Arima', cursive;
+  font-family: "Roboto Slab", serif;
   color: #51170b;
   font-size: 1.1vw;
 }
@@ -31,7 +31,7 @@
   height: 170px;
   background-position: center;
   border-color: transparent;
-  font-family: 'Arima', cursive;
+  font-family: "Roboto Slab", serif;
   color: #51170b;
 }
 
@@ -47,7 +47,7 @@
 .footer {
   background-color: #51170b;
   color:#fba275;
-  font-family: 'Arima', cursive;
+  font-family: "Roboto Slab", serif;
   font-weight: bold;
   text-align: center;
   padding: 3px;
@@ -119,10 +119,8 @@
   line-height: 0.9;
 }
 
-
-
 .dates {
-  font-family: 'Arima', cursive;
+  font-family: "Roboto Slab", serif;
   color: #9a3923;
   font-size: 3.3vw;
   margin-block-start: 0em;

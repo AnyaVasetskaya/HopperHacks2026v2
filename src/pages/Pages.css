@@ -1,17 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Sancreek&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto+Slab:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto+Slab:wght@700&display=swap');
 
 .section-title {
-    font-family: 'Sancreek', cursive;
+    font-family: 'Cinzel Decorative', serif;
     color: #51170b;
     font-size: 6vh;
+    font-weight: 800;
     margin-block-start: 1em;
     margin-block-end: 1em;
     text-align: center;
   }
 
   .section-sub-title {
-    font-family: 'Arima', cursive;
+    font-family: 'Merriweather', serif;
     color: #51170b;
     font-weight: bold;
     text-align: center;
@@ -19,7 +20,7 @@
   }
 
   .section-tiny-text {
-    font-family: 'Arima', cursive;
+    font-family: 'Merriweather', serif;
     color: #9a3923;
     font-weight: bold;
     text-align: center;
@@ -27,7 +28,7 @@
   }
 
   .section-sub-text {
-    font-family: 'Arima', cursive;
+    font-family: 'Merriweather', serif;
     color: #51170b;
     font-weight: bold;
     text-align: center;
@@ -38,7 +39,7 @@
     font-size: 3.1vh;
   }
 .section-text {
-  font-family: 'Arima', cursive;
+  font-family: 'Merriweather', serif;
   color: #51170b;
   font-weight: bold;
   text-align: center;
