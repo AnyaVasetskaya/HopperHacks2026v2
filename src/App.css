@@ -59,7 +59,6 @@
 
 .background {
   background-color: #222f5b;
-  /* background-image: url('~/public/paths.png'); */
   background-size: contain;
   min-height: 100vh;
   width: 100%;
@@ -135,13 +134,147 @@
 }
 
 .dates {
-  font-family: "Roboto Slab", serif;
-  color: #9a3923;
-  font-size: 3.3vw;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
+  font-family: 'Merriweather', serif;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3vw;
   text-align: center;
-  padding-right: 10%;
+  margin-top: 1vh;
+  margin-bottom: 0.5vh;
+}
+
+.by-wics-image {
+  width: 30vw;
+  height: auto;
+  display: block;
+}
+
+.envelope-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4vh 0;
+}
+
+.envelope-image {
+  width: 55vw;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+  margin-top: 15vh;
+  margin-bottom: 8vh;
+}
+
+.envelope-image:hover {
+  animation: wiggle 0.5s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+}
+
+.invitation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.invitation-modal {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.invitation-image {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;
+  display: block;
+}
+
+.close-button {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #9a3923;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  line-height: 1;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #51170b;
+}
+
+.cloud-hopper-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6vh 0;
+  padding: 0 2vw;
+}
+
+.cloud-image {
+  width: 20vw;
+  height: auto;
+  display: block;
+  animation: bounce 3s ease-in-out infinite;
+}
+
+.cloud-image:first-child {
+  animation-delay: 0s;
+}
+
+.cloud-image:last-child {
+  animation-delay: 1s;
+}
+
+.hopper-logo-image {
+  width: 35vw;
+  height: auto;
+  display: block;
+  animation: bounce 2.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
 .slide-in-left {
@@ -220,11 +353,17 @@
   margin: 0 auto;
 }
 
-.hh-logo-image {
+.logo-container {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hh-logo-image {
   width: 60vw;
   height: auto;
   display: block;
@@ -238,11 +377,11 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translate(-50%, -40%);
+    transform: translateY(-10%);
   }
   to {
     opacity: 1;
-    transform: translate(-50%, -50%);
+    transform: translateY(0);
   }
 }
 .contacts-banner {
@@ -253,15 +392,36 @@
   margin: 0 auto;
 }
 
-.owl-image {
+.owl-container {
   position: absolute;
   left: 2%;
   top: 50%;
-  transform: rotate(0deg) translateY(-10%);
+  transform: translateY(-10%);
+}
+
+.owl-image {
+  position: relative;
   width: 25vw;
   height: auto;
   opacity: 0;
+  transform: rotate(0deg);
   transform-origin: 48vw top;
+}
+
+.owl-envelope {
+  position: absolute;
+  left: 35%;
+  top: 55%;
+  transform: rotate(0deg);
+  width: 8vw;
+  height: auto;
+  opacity: 0;
+  z-index: 10;
+  transform-origin: 48vw top;
+}
+
+.owl-envelope.fade-in-rotate {
+  animation: fadeInRotate 1.2s ease-out forwards;
 }
 
 .owl-image.fade-in-rotate {

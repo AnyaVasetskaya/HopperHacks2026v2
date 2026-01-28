@@ -12,6 +12,13 @@ import mentorImage from './assets/mentor.PNG'
 import judgeImage from './assets/judge.PNG'
 import hackerImage from './assets/hacker.PNG'
 import owlImage from './assets/owl.PNG'
+import byWicsImage from './assets/by WiCS.png'
+import bricksImage from './assets/bricksv1.png'
+import envelopeImage from './assets/envelope.PNG'
+import invitationImage from './assets/invitation.png'
+import cloud1Image from './assets/cloud 1.png'
+import cloud3Image from './assets/cloud 3.png'
+import logoHopperImage from './assets/logo hopper.PNG'
 
 const stars = [
   { left: 23, top: 8, size: 9 },
@@ -23,6 +30,7 @@ const stars = [
 const App = () => {
 
   const [animate, setAnimate] = useState(false);
+  const [showInvitation, setShowInvitation] = useState(false);
 
   useEffect(() => {
     document.title = 'HopperHacks X: 2025'; // Set your desired tab title here
@@ -38,15 +46,22 @@ const App = () => {
   }, []);
 
   return (
-    <div className='background'>
+    <div style={{backgroundImage: `url(${bricksImage})`}} className='background'>
       <Nav />
       {stars.map((star, index) => (
         <Star key={index} left={star.left} top={star.top} size={star.size} />
       ))}
       <div className='info-container'>
         <div className='header-container'>
-          <img className={animate ? 'owl-image fade-in-rotate' : 'owl-image'} src={owlImage} alt="owl"/>
-          <img className={animate ? 'hh-logo-image fade-in-up' : 'hh-logo-image'} src={logoImage} alt="wics logo"/>
+          <div className='owl-container'>
+            <img className={animate ? 'owl-envelope fade-in-rotate' : 'owl-envelope'} src={envelopeImage} alt="mini envelope"/>
+            <img className={animate ? 'owl-image fade-in-rotate' : 'owl-image'} src={owlImage} alt="owl"/>
+          </div>
+          <div className='logo-container'>
+            <img className={animate ? 'hh-logo-image fade-in-up' : 'hh-logo-image'} src={logoImage} alt="wics logo"/>
+            <h1 className='dates'>Feb 21-22</h1>
+            <img className='by-wics-image' src={byWicsImage} alt="by WiCS"/>
+          </div>
           <div className='role-images-stack'>
             <a href="https://forms.gle/hackerlink" target="_blank" rel="noopener noreferrer" className={animate ? 'role-link fade-in-right' : 'role-link'}>
               <img className='role-image' src={hackerImage} alt="hacker"/>
@@ -62,13 +77,40 @@ const App = () => {
             </a>
           </div>
         </div>
-        {/* <h1 className={animate ? 'slide-in-left dates' : 'dates'}>02.22 - 02.23</h1> */}
-       
+
+        {/* envelope */}
+        <div className='envelope-container'>
+          <img
+            className='envelope-image'
+            src={envelopeImage}
+            alt="envelope"
+            onClick={() => setShowInvitation(true)}
+            style={{ cursor: 'pointer' }}
+          />
+        </div>
+
+        {/* Invitation Popup */}
+        {showInvitation && (
+          <div className='invitation-overlay' onClick={() => setShowInvitation(false)}>
+            <div className='invitation-modal' onClick={(e) => e.stopPropagation()}>
+              <button className='close-button' onClick={() => setShowInvitation(false)}>×</button>
+              <img className='invitation-image' src={invitationImage} alt="invitation"/>
+            </div>
+          </div>
+        )}
+
         <div className='pages'>
 
           <div id="schedule">
             <Schedule/>
           </div>
+
+          <div className='cloud-hopper-row'>
+            <img className='cloud-image' src={cloud1Image} alt="cloud 1"/>
+            <img className='hopper-logo-image' src={logoHopperImage} alt="logo hopper"/>
+            <img className='cloud-image' src={cloud3Image} alt="cloud 3"/>
+          </div>
+
           <div id='tracks'>
             <Tracks/>
           </div>

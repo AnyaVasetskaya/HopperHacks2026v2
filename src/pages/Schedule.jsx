@@ -5,7 +5,7 @@ import './Pages.css';
 const Schedule = () => {
   return (
     <div>
-      <p className='section-title'>Schedule</p>
+      <br></br><br></br><br></br>
       <img className='schedule-image' src={scheduleImage} alt="wics logo"/>
     </div>
   );
