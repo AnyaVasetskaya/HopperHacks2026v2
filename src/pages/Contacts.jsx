@@ -19,7 +19,7 @@ const Contacts = () => {
     const LinkedinIcon = linkedinIcon;
   return (
     <div>
-      <p className='section-title'>~Contacts~</p>
+      <p className='section-title'>Contacts</p>
       <div className='contacts-container'>
         <img className='contacts-banner' src={contactsBanner} alt="contacts banner"/>
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className='contact-icon' style={{left: '15%', top: '25%'}}>

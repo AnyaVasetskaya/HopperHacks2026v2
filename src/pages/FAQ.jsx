@@ -121,7 +121,7 @@ const FAQ = () => {
 
   return (
     <div style={{ textAlign: 'center' }}>
-      <p className='section-title'>~FAQ~</p>
+      <p className='section-title'>FAQ</p>
       {Object.keys(faqData).map((category) => (
         <div key={category}>
           <h3 className='section-sub-title'>
