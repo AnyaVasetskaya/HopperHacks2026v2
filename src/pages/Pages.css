@@ -53,3 +53,37 @@
   margin: 0 auto;
   padding-bottom: 30px
 }
+
+.contacts-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contacts-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.contact-icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  text-decoration: none;
+}
+
+.contact-icon:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.icon-svg {
+  font-size: 4vw;
+  max-width: 60px;
+  min-width: 30px;
+  width: 4vw;
+  height: auto;
+}
