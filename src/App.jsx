@@ -103,47 +103,49 @@ const App = () => {
         <Star key={index} left={star.left} top={star.top} size={star.size} />
       ))}
       <div className='info-container'>
-        <div className='header-container'>
-          <div className='owl-container'>
-            <img className={animate ? 'owl-envelope fade-in-rotate' : 'owl-envelope'} src={envelopeImage} alt="mini envelope"/>
-            <img className={animate ? 'owl-image fade-in-rotate' : 'owl-image'} src={owlImage} alt="owl"/>
+        <div className='hero-section'>
+          <div className='header-container'>
+            <div className='owl-container'>
+              <img className={animate ? 'owl-envelope fade-in-rotate' : 'owl-envelope'} src={envelopeImage} alt="mini envelope"/>
+              <img className={animate ? 'owl-image fade-in-rotate' : 'owl-image'} src={owlImage} alt="owl"/>
+            </div>
+            <div className='logo-container'>
+              <img className={animate ? 'hh-logo-image fade-in-up' : 'hh-logo-image'} src={logoImage} alt="wics logo"/>
+              <img className='logo-star logo-star-3' src={stars3Image} alt="star 3"/>
+              <img className='logo-star logo-star-4' src={stars4Image} alt="star 4"/>
+              <h1 className='dates'>Feb 21-22</h1>
+              <a href="https://www3.cs.stonybrook.edu/~wics/pages/index.html" target="_blank" rel="noopener noreferrer">
+                <img className='by-wics-image' src={byWicsImage} alt="by WiCS"/>
+              </a>
+            </div>
+            <div className='role-images-stack'>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScZMfBfluve6xPbB2RWc2MndtQHvB-pAK_XOZDyyHghVCpGkg/viewform?usp=header" target="_blank" rel="noopener noreferrer" className={animate ? 'role-link fade-in-right' : 'role-link'}>
+                <img className='role-image' src={hackerImage} alt="hacker"/>
+                <p className="role-text">Hacker Registration</p>
+              </a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSe1jelBrS65iw3JdC8bjPLMbNEyPibUQducjKY6MODve1_nZQ/viewform?usp=header" target="_blank" rel="noopener noreferrer" className={animate ? 'role-link fade-in-right' : 'role-link'}>
+                <img className='role-image' src={mentorImage} alt="mentor"/>
+                <p className="role-text">Mentor Application</p>
+              </a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWj0T7Oys4lcqehwKc-E9Ics5roca8PP2L8r-Znya1gXLZ4Q/viewform?usp=header" target="_blank" rel="noopener noreferrer" className={animate ? 'role-link fade-in-right' : 'role-link'}>
+                <img className='role-image' src={judgeImage} alt="judge"/>
+                <p className="role-text">Judge Application</p>
+              </a>
+            </div>
           </div>
-          <div className='logo-container'>
-            <img className={animate ? 'hh-logo-image fade-in-up' : 'hh-logo-image'} src={logoImage} alt="wics logo"/>
-            <img className='logo-star logo-star-3' src={stars3Image} alt="star 3"/>
-            <img className='logo-star logo-star-4' src={stars4Image} alt="star 4"/>
-            <h1 className='dates'>Feb 21-22</h1>
-            <a href="https://www3.cs.stonybrook.edu/~wics/pages/index.html" target="_blank" rel="noopener noreferrer">
-              <img className='by-wics-image' src={byWicsImage} alt="by WiCS"/>
-            </a>
-          </div>
-          <div className='role-images-stack'>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScZMfBfluve6xPbB2RWc2MndtQHvB-pAK_XOZDyyHghVCpGkg/viewform?usp=header" target="_blank" rel="noopener noreferrer" className={animate ? 'role-link fade-in-right' : 'role-link'}>
-              <img className='role-image' src={hackerImage} alt="hacker"/>
-              <p className="role-text">Hacker Registration</p>
-            </a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe1jelBrS65iw3JdC8bjPLMbNEyPibUQducjKY6MODve1_nZQ/viewform?usp=header" target="_blank" rel="noopener noreferrer" className={animate ? 'role-link fade-in-right' : 'role-link'}>
-              <img className='role-image' src={mentorImage} alt="mentor"/>
-              <p className="role-text">Mentor Application</p>
-            </a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWj0T7Oys4lcqehwKc-E9Ics5roca8PP2L8r-Znya1gXLZ4Q/viewform?usp=header" target="_blank" rel="noopener noreferrer" className={animate ? 'role-link fade-in-right' : 'role-link'}>
-              <img className='role-image' src={judgeImage} alt="judge"/>
-              <p className="role-text">Judge Application</p>
-            </a>
-          </div>
-        </div>
 
-        {/* envelope */}
-        <div className='envelope-container'>
-          <img className='candle candle-left' src={candleImage} alt="candle"/>
-          <img
-            className='envelope-image'
-            src={envelopeImage}
-            alt="envelope"
-            onClick={() => setShowInvitation(true)}
-            style={{ cursor: 'pointer' }}
-          />
-          <img className='candle candle-right' src={candleImage} alt="candle"/>
+          {/* envelope */}
+          <div className='envelope-container'>
+            <img className='candle candle-left' src={candleImage} alt="candle"/>
+            <img
+              className='envelope-image'
+              src={envelopeImage}
+              alt="envelope"
+              onClick={() => setShowInvitation(true)}
+              style={{ cursor: 'pointer' }}
+            />
+            <img className='candle candle-right' src={candleImage} alt="candle"/>
+          </div>
         </div>
 
         {/* Invitation Popup */}

@@ -24,6 +24,8 @@
     display: none;
     flex-direction: column;
     cursor: pointer;
+    margin-left: auto;
+    margin-right: 90px;
 }
 
 .bar {
@@ -39,6 +41,9 @@
     display: flex;
     margin: 0;
     padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav-links li {
@@ -57,7 +62,7 @@
     color: #90a3da;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 840px) {
     .menu-toggle {
         display: flex;
     }

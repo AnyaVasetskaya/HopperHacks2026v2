@@ -21,7 +21,7 @@ const Nav = () => {
           position: "fixed",
           top: 0,
           right: "clamp(0.5rem, 2vw, 2rem)",
-          width: "clamp(60px, 7vw, 100px)",
+          width: "clamp(50px, 6vw, 75px)",
           zIndex: 10000,
         }}
       >

@@ -197,6 +197,13 @@
   z-index: 2;
 }
 
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+}
+
 .header-container {
   padding-top: 15vw;
   position: relative;
@@ -286,7 +293,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 4vh 0;
+  margin: 0;
   position: relative;
   gap: 5vw;
 }
@@ -296,8 +303,8 @@
   height: auto;
   display: block;
   transition: transform 0.3s ease;
-  margin-bottom: 8vh;
-  margin-top: 4vh;
+  margin-bottom: 2vh;
+  margin-top: 5vh;
 }
 
 .candle {
@@ -320,6 +327,22 @@
   }
   50% {
     transform: translateY(-20px);
+  }
+}
+
+@media (max-width: 840px) {
+  .hero-section {
+    gap: 1vh;
+  }
+
+  .header-container {
+    padding-top: 10vw;
+    min-height: 40vh;
+  }
+
+  .envelope-image {
+    margin-bottom: 1vh;
+    margin-top: 1vh;
   }
 }
 
