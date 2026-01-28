@@ -7,10 +7,10 @@
 /* src/Navbar.css */
 .navbar {
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: flex-start;
+    gap: 2rem; /* 👈 controls spacing */
     padding: 1rem 2rem;
-    position: relative;
 }
 
 .logo {

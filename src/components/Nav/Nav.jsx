@@ -11,7 +11,27 @@ const Nav = () => {
   };
 
   return (
-    <nav className="navbar">
+    <>
+    <a
+        id="mlh-trust-badge"
+        href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          position: "fixed",
+          top: 0,
+          right: "clamp(0.5rem, 2vw, 2rem)",
+          width: "clamp(60px, 7vw, 100px)",
+          zIndex: 10000,
+        }}
+      >
+        <img
+          src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-white.svg"
+          alt="Major League Hacking 2026 Hackathon Season"
+          style={{ width: "100%", height: "auto" }}
+        />
+      </a>
+      <nav className="navbar">
       <a href="https://www3.cs.stonybrook.edu/~wics/pages/index.html" target="_blank" rel="noopener noreferrer">
         <img className='logo' src={logoImage} alt="wics logo"/>
       </a>
@@ -75,9 +95,9 @@ const Nav = () => {
             <h1 href="#contacts">Contacts</h1>
           </button>
         </li>
-        {/* <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-white.svg" alt="Major League Hacking 2026 Hackathon Season"></img></a> */}
       </ul>
     </nav>
+    </>
   );
 };
 
