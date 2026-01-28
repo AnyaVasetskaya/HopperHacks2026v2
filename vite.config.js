@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/~wics/hopperhacks/2025/',
+  base: '/~wics/hopperhacks/2026/',
   plugins: [react()],
   assetsInclude: ['**/*.PNG'],
 })
