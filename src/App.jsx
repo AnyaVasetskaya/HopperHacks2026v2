@@ -6,12 +6,7 @@ import Sponsors from './pages/Sponsors.jsx';
 import Contacts from './pages/Contacts.jsx';
 import React, { useEffect, useState } from 'react';
 import Star from './components/Star/Star.jsx'
-import applyImage from './assets/apply.png';
-import pathsImage from './assets/paths.png';
-import shipImage from './assets/hopper_ship.png'
-import xImage from './assets/X.png'
 import Tracks from './pages/Tracks.jsx';
-import Environment from './pages/Environment.jsx';
 
 const stars = [
   { left: 23, top: 8, size: 9 },
@@ -38,24 +33,17 @@ const App = () => {
   }, []);
 
   return (
-    <div style={{backgroundImage: `url(${pathsImage})`}} className='background'>
+    <>
+    {/* <div style={{backgroundImage: `url(${pathsImage})`}} className='background'> */}
       <Nav />
       {stars.map((star, index) => (
         <Star key={index} left={star.left} top={star.top} size={star.size} />
       ))}
-      <div className='left-images'>
-        <img className='ship' src={shipImage} alt="ship smudge"/>
-      </div>
-      <img className='x' src={xImage} alt="an x"/>
       <div className='info-container'>
         <p className={animate ? 'slide-in-left title' : 'title'}>HopperHacks</p>
         <p className={animate ? 'slide-in-left year' : 'year'}>2025</p>
         <h1 className={animate ? 'slide-in-left dates' : 'dates'}>02.22 - 02.23</h1>
-        <div className='apply-button'>
-          <button style={{zIndex: '8888', backgroundImage: `url(${applyImage})`}}  className="actual-button">
-            <h1><a rel="noreferrer" style={{color: 'inherit', textDecoration: 'none'}} target='_blank' href="https://www3.cs.stonybrook.edu/~wics/pages/index.html">by WiCS</a></h1>
-          </button>
-        </div>
+       
         <div className='pages'>
 
           <div id="schedule">
@@ -78,7 +66,8 @@ const App = () => {
       <div className='footer'>
         <p>Brought to you by Women in Computer Science at Stony Brook University</p>
       </div>
-    </div>
+    {/* </div> */}
+    </>
   );
 };
 

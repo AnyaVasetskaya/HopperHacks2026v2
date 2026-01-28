@@ -1,15 +1,12 @@
 import React from 'react';
 import './Pages.css';
-import applyImage from '../assets/apply.png'; 
 
 const Apply = () => {
   return (
     <div>
       <p className='section-title'>~Apply~</p>
       <div style={{display: 'flex', alignItems: 'center', flexDirection:'column'}}>
-          <button style={{zIndex: '8888', backgroundImage: `url(${applyImage})`, width: '900px'}}  className="sub-buttons">
-            <h1><a rel="noreferrer" style={{color: 'inherit', textDecoration: 'none'}} target='_blank' href="https://docs.google.com/forms/d/e/1FAIpQLSdVYY_hIKeoECiYFsKA81UOvEG_EOcRfMDuK7bfZMr-qA3MxQ/viewform?usp=sf_link">Apply as a Hacker</a></h1>
-          </button>
+        
           <button style={{zIndex: '8888', backgroundImage: `url(${applyImage})`, width: '900px'}}  className="sub-buttons">
             <h1><a rel="noreferrer" style={{color: 'inherit', textDecoration: 'none'}} target='_blank' href="https://docs.google.com/forms/d/e/1FAIpQLScEnULt8WaWTGS8XNwhYtH2femvzaNcFTWPYBglAIwPkoAvVw/viewform?usp=sf_link">Apply as a Mentor</a></h1>
           </button>

@@ -1,17 +1,20 @@
 import React from 'react';
 import './Pages.css';
 import { useState } from 'react';
-import hookImage from '../assets/hook.png'
 
 const faqData = {
   general: [
     {
       question: "What is a hackathon?",
-      answer: "A hackathon is a day-long event where attendees can compete for prize categories, attend workshops, and participate in fun activities and games. Competing is completely optional! You can also choose which workshops/activities you want or don’t want to attend based on your interests."
+      answer: "A hackathon is a day-long event where attendees can compete for prize categories, attend workshops, and participate in fun activities and games. Competing is completely optional! You can also choose which workshops/activities you want or don't want to attend based on your interests."
     },
     {
       question: "Do I need to know how to code?",
-      answer: "Short answer: Nope! Long answer: HopperHacks is a beginner-friendly hackathon, so please do not feel as if you need to have any coding experience to participate. If you do not know how to code but want to learn and have fun, we have workshops and activities throughout the event for you to attend. We know that hackathons can be intimidating for many first-time hackers, and so we want this to be a learning and fun experience for you to become more comfortable with working with others, developing new skills, and letting your creativity shine under a time constraint."
+      answer: "Short answer: Nope! Long answer: HopperHacks is a beginner-friendly hackathon, so please do not feel as if you need to have any coding experience to participate. If you do not know how to code but want to learn and have fun, we have workshops and activities throughout the event for you to attend. We know that hackathons can be intimidating for many first-time hackers, and so we want this to be a learning and fun experience for you to become more comfortable with working with others, developing new skills, and letting your creativity shine under a time constraint. Mentors will also be available to assist participants in-person on Saturday and virtually on Discord throughout the hacking period (12:00 PM Saturday to 12:00 PM Sunday)."
+    },
+    {
+      question: "What about perks for the hackers?",
+      answer: "Come to our Bootcamp Week and day-of workshops to learn with fellow students! Receive swag such as T-shirts, stickers, and more! Visit the photobooth and take pictures with your team and other participants! Food and drink will be provided, so come have a magical weekend with us to have fun and be the best hacker you can be. Mini games will be held throughout the hacking period."
     },
     {
       question: "What is HopperHacks Bootcamp Week?",
@@ -23,7 +26,11 @@ const faqData = {
     },
     {
       question: "When is HopperHacks?",
-      answer: "HopperHacks 2025 will begin Saturday, February 22nd at 10:00 AM and end on Sunday, February 23rd at 8:00 PM!"
+      answer: "HopperHacks 2026 will begin Saturday, February 21st at 11:00 AM and end on Sunday, February 22nd at 8:00 PM!"
+    },
+    {
+      question: "Where is HopperHacks?",
+      answer: "HopperHacks is happening in person in SAC Ballroom A this year, on Saturday from 11:00 AM to 10:00 PM, and on Sunday from 12:00 to 8:00 PM! We do not have an overnight venue, and participants will continue hacking remotely overnight."
     },
     {
       question: "I have more questions!",
@@ -33,11 +40,11 @@ const faqData = {
   registration: [
     {
       question: "Who can attend?",
-      answer: "We welcome all undergraduate and graduate students, regardless of gender, major and school! Open to programmers and designers of all skill levels. Coding experience not required."
+      answer: "We welcome all undergraduate and graduate students, regardless of gender, major and school! Open to programmers and designers of all skill levels. Coding experience is not required."
     },
     {
       question: "When is the deadline to register?",
-      answer: "The registration deadline is TBD. Please fill out the interest form to be the first to know when applications open!"
+      answer: "The registration deadline is Friday, February 20th, at 11:59 PM EST."
     },
     {
       question: "Do I need to create a Devpost Account?",
@@ -49,33 +56,25 @@ const faqData = {
     },
     {
       question: "How can I be a mentor?",
-      answer: "You can apply to be a mentor in the HopperHacks application, which will be released soon. Please understand that we will not be able to accept everyone to be a mentor!"
-    },
-    {
-      question: "How can I be a volunteer?",
-      answer: "You can apply to be a volunteer in the HopperHacks application, which will be released soon. Please note that we cannot accept all volunteer applications!"
+      answer: "You can apply to be a mentor here! Please understand that we will not be able to accept everyone to be a mentor!"
     },
   ],
   tracks: [
     {
       question: "What are the tracks?",
-      answer: "We will have several tracks for you to hack in, which will be revealed closer to the hackathon! Each track has it's own judging criteria and style. The winners of each track will receive a prize!"
+      answer: "We will have several tracks for you to hack in, which are up on our Devpost! Each track has its own judging criteria and style. The winners of each track will receive a prize!"
     },
     {
       question: "How will prizes work?",
-      answer: "You will submit a project to ONE track. If that project wins the track, you'll recieve communication from us for instructions on how to redeem your prize!",
+      answer: "You can submit a project to up to 3 tracks—one main track and two mini tracks! Each project can win up to one track total."
     },
     {
       question: "Do I have to enter a track?",
-      answer: "Yes, if you wish to compete in a track. Please note that you can only enter to ONE track. If you enter multiple tracks, one will be assigned to you.",
-    },
-    {
-      question: "Can I enter multiple tracks?",
-      answer: "We do not accept multiple track submissions.",
+      answer: "Yes, if you wish to compete in a track. A project can be entered for up to 3 tracks!"
     },
     {
       question: "How can I enter the Best Beginner Hack?",
-      answer: "A team must be at least 50% beginner hackers (less than 2 hackathons attended).",
+      answer: "A team must be at least 50% beginner hackers (first-time hackathon participants)."
     },
   ],
   logistics: [
@@ -92,12 +91,16 @@ const faqData = {
       answer: "No cross-submitting is permitted. If a project is cross-submitted, then the project will not be considered for judging."
     },
     {
-      question: "Are there any travel reimbursements or overnight accomodations?",
+      question: "How will judging work?",
+      answer: "Judging is in person this year, in SAC Ballroom A, from 1:00 PM to 5:00 PM on Sunday, February 22nd. Participants will be assigned to tables and present to judges as they come around."
+    },
+    {
+      question: "Are there any travel reimbursements or overnight accommodations?",
       answer: "While HopperHacks is an overnight event, we do not provide an overnight space nor do we reimburse travel/housing. Be sure to make arrangements beforehand if you would like to stay on campus for the entire hackathon."
     },
     {
       question: "Where is HopperHacks?",
-      answer: "HopperHacks will take place in SAC! The main hacking space will be Ballroom A, the awards ceremony will be in the SAC Auditorium, and there will be various bootcamp events on the third floor of the building!"
+      answer: "HopperHacks will take place in SAC! The main hacking space on Saturday and the judging and awards on Sunday will all take place in person in Ballroom A. There will also be various bootcamp events on the third floor of the building!"
     },
   ],
 };
@@ -118,27 +121,61 @@ const FAQ = () => {
   return (
     <div style={{ textAlign: 'center' }}>
       <p className='section-title'>~FAQ~</p>
-      <img className='image' src={hookImage} alt="hook"/>
       {Object.keys(faqData).map((category) => (
         <div key={category}>
           <h3 className='section-sub-title'>
             {category.charAt(0).toUpperCase() + category.slice(1)}
           </h3>
-          <ul>
+          <ul style={{ padding: '0 20px' }}>
             {faqData[category].map((faq, index) => (
-              <li style={{ listStyleType: 'none' }} key={index}>
+              <li style={{ listStyleType: 'none', marginBottom: '15px' }} key={index}>
                 <div
                   onClick={() => toggleAnswer(category, index)}
-                  style={{ cursor: 'pointer', marginBottom: '10px' }}
+                  style={{
+                    cursor: 'pointer',
+                    border: '2px solid #fba275',
+                    borderRadius: '15px',
+                    padding: '15px 20px',
+                    backgroundColor: '#fff',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    gap: '15px'
+                  }}
                 >
-                  <strong className='section-text question'>{faq.question}</strong>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '15px', flex: 1 }}>
+                    <div style={{
+                      width: '30px',
+                      height: '30px',
+                      backgroundColor: '#fba275',
+                      borderRadius: '8px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0
+                    }}>
+                      <span style={{ fontSize: '20px' }}>❓</span>
+                    </div>
+                    <strong className='section-text question' style={{ textAlign: 'left' }}>
+                      {faq.question}
+                    </strong>
+                  </div>
+                  <div style={{
+                    fontSize: '20px',
+                    transform: expandedIndex.category === category && expandedIndex.index === index ? 'rotate(180deg)' : 'rotate(0deg)',
+                    transition: 'transform 0.3s ease',
+                    flexShrink: 0
+                  }}>
+                    ▼
+                  </div>
                 </div>
                 {expandedIndex.category === category && expandedIndex.index === index && (
                   <p
                     style={{
-                      padding: '10px',
+                      padding: '20px',
                       backgroundColor: '#fba275',
-                      borderRadius: '40px',
+                      borderRadius: '15px',
+                      marginTop: '10px',
                     }}
                     className='section-tiny-text'
                   >
