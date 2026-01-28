@@ -24,6 +24,7 @@ import starry2Image from './assets/starry2.png'
 import starry3Image from './assets/starry3.png'
 import stars3Image from './assets/stars 3.png'
 import stars4Image from './assets/stars 4.png'
+import candleImage from './assets/candle.png'
 
 const stars = [
   { left: 23, top: 8, size: 9 },
@@ -134,6 +135,7 @@ const App = () => {
 
         {/* envelope */}
         <div className='envelope-container'>
+          <img className='candle candle-left' src={candleImage} alt="candle"/>
           <img
             className='envelope-image'
             src={envelopeImage}
@@ -141,6 +143,7 @@ const App = () => {
             onClick={() => setShowInvitation(true)}
             style={{ cursor: 'pointer' }}
           />
+          <img className='candle candle-right' src={candleImage} alt="candle"/>
         </div>
 
         {/* Invitation Popup */}
