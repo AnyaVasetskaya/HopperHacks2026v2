@@ -15,7 +15,7 @@ import owlImage from './assets/owl.PNG'
 import byWicsImage from './assets/by WiCS.png'
 import bricksImage from './assets/bricksv1.png'
 import envelopeImage from './assets/envelope.PNG'
-import invitationImage from './assets/invitation.png'
+import invitationImage from './assets/invitationUpdated.png'
 import cloud1Image from './assets/cloud 1.png'
 import cloud3Image from './assets/cloud 3.png'
 import logoHopperImage from './assets/logo hopper.PNG'
@@ -33,7 +33,7 @@ const App = () => {
   const [showInvitation, setShowInvitation] = useState(false);
 
   useEffect(() => {
-    document.title = 'HopperHacks X: 2025'; // Set your desired tab title here
+    document.title = 'HopperHacks 2026'; // Set your desired tab title here
   }, []);
 
   useEffect(() => {
@@ -60,18 +60,20 @@ const App = () => {
           <div className='logo-container'>
             <img className={animate ? 'hh-logo-image fade-in-up' : 'hh-logo-image'} src={logoImage} alt="wics logo"/>
             <h1 className='dates'>Feb 21-22</h1>
-            <img className='by-wics-image' src={byWicsImage} alt="by WiCS"/>
+            <a href="https://www3.cs.stonybrook.edu/~wics/pages/index.html" target="_blank" rel="noopener noreferrer">
+              <img className='by-wics-image' src={byWicsImage} alt="by WiCS"/>
+            </a>
           </div>
           <div className='role-images-stack'>
-            <a href="https://forms.gle/hackerlink" target="_blank" rel="noopener noreferrer" className={animate ? 'role-link fade-in-right' : 'role-link'}>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScZMfBfluve6xPbB2RWc2MndtQHvB-pAK_XOZDyyHghVCpGkg/viewform?usp=header" target="_blank" rel="noopener noreferrer" className={animate ? 'role-link fade-in-right' : 'role-link'}>
               <img className='role-image' src={hackerImage} alt="hacker"/>
               <p className="role-text">Hacker Registration</p>
             </a>
-            <a href="https://forms.gle/mentorlink" target="_blank" rel="noopener noreferrer" className={animate ? 'role-link fade-in-right' : 'role-link'}>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe1jelBrS65iw3JdC8bjPLMbNEyPibUQducjKY6MODve1_nZQ/viewform?usp=header" target="_blank" rel="noopener noreferrer" className={animate ? 'role-link fade-in-right' : 'role-link'}>
               <img className='role-image' src={mentorImage} alt="mentor"/>
               <p className="role-text">Mentor Application</p>
             </a>
-            <a href="https://forms.gle/judgelink" target="_blank" rel="noopener noreferrer" className={animate ? 'role-link fade-in-right' : 'role-link'}>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWj0T7Oys4lcqehwKc-E9Ics5roca8PP2L8r-Znya1gXLZ4Q/viewform?usp=header" target="_blank" rel="noopener noreferrer" className={animate ? 'role-link fade-in-right' : 'role-link'}>
               <img className='role-image' src={judgeImage} alt="judge"/>
               <p className="role-text">Judge Application</p>
             </a>

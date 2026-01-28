@@ -75,6 +75,7 @@ const Nav = () => {
             <h1 href="#contacts">Contacts</h1>
           </button>
         </li>
+        {/* <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-white.svg" alt="Major League Hacking 2026 Hackathon Season"></img></a> */}
       </ul>
     </nav>
   );
