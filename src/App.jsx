@@ -7,6 +7,11 @@ import Contacts from './pages/Contacts.jsx';
 import React, { useEffect, useState } from 'react';
 import Star from './components/Star/Star.jsx'
 import Tracks from './pages/Tracks.jsx';
+import logoImage from './assets/hh26 logo.png'
+import mentorImage from './assets/mentor.PNG'
+import judgeImage from './assets/judge.PNG'
+import hackerImage from './assets/hacker.PNG'
+import owlImage from './assets/owl.PNG'
 
 const stars = [
   { left: 23, top: 8, size: 9 },
@@ -39,9 +44,25 @@ const App = () => {
         <Star key={index} left={star.left} top={star.top} size={star.size} />
       ))}
       <div className='info-container'>
-        <p className={animate ? 'slide-in-left title' : 'title'}>HopperHacks</p>
-        <p className={animate ? 'slide-in-left year' : 'year'}>2025</p>
-        <h1 className={animate ? 'slide-in-left dates' : 'dates'}>02.22 - 02.23</h1>
+        <div className='header-container'>
+          <img className={animate ? 'owl-image fade-in-rotate' : 'owl-image'} src={owlImage} alt="owl"/>
+          <img className={animate ? 'hh-logo-image fade-in-up' : 'hh-logo-image'} src={logoImage} alt="wics logo"/>
+          <div className='role-images-stack'>
+            <a href="https://forms.gle/hackerlink" target="_blank" rel="noopener noreferrer" className={animate ? 'role-link fade-in-right' : 'role-link'}>
+              <img className='role-image' src={hackerImage} alt="hacker"/>
+              <p className="role-text">Hacker Registration</p>
+            </a>
+            <a href="https://forms.gle/mentorlink" target="_blank" rel="noopener noreferrer" className={animate ? 'role-link fade-in-right' : 'role-link'}>
+              <img className='role-image' src={mentorImage} alt="mentor"/>
+              <p className="role-text">Mentor Application</p>
+            </a>
+            <a href="https://forms.gle/judgelink" target="_blank" rel="noopener noreferrer" className={animate ? 'role-link fade-in-right' : 'role-link'}>
+              <img className='role-image' src={judgeImage} alt="judge"/>
+              <p className="role-text">Judge Application</p>
+            </a>
+          </div>
+        </div>
+        {/* <h1 className={animate ? 'slide-in-left dates' : 'dates'}>02.22 - 02.23</h1> */}
        
         <div className='pages'>
 
