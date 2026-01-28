@@ -1,18 +1,17 @@
 import './App.css';
 import Nav from './components/Nav/Nav.jsx';
-import About from './pages/About.jsx';
 import Schedule from './pages/Schedule.jsx';
 import FAQ from './pages/FAQ.jsx';
 import Sponsors from './pages/Sponsors.jsx';
+import Contacts from './pages/Contacts.jsx';
 import React, { useEffect, useState } from 'react';
 import Star from './components/Star/Star.jsx'
-import applyImage from './assets/apply.png'; 
-import pathsImage from './assets/paths.png'; 
+import applyImage from './assets/apply.png';
+import pathsImage from './assets/paths.png';
 import shipImage from './assets/hopper_ship.png'
 import xImage from './assets/X.png'
 import Tracks from './pages/Tracks.jsx';
 import Environment from './pages/Environment.jsx';
-import Apply from './pages/Apply.jsx';
 
 const stars = [
   { left: 23, top: 8, size: 9 },
@@ -58,16 +57,7 @@ const App = () => {
           </button>
         </div>
         <div className='pages'>
-          
-          <div id='about'>
-            <About/>
-          </div>
-          <div id='apply'>
-            <Apply/>
-          </div>
-          <div id="environment">
-            <Environment/>
-          </div>
+
           <div id="schedule">
             <Schedule/>
           </div>
@@ -79,6 +69,9 @@ const App = () => {
           </div>
           <div id="sponsors">
             <Sponsors/>
+          </div>
+          <div id='contacts'>
+            <Contacts/>
           </div>
         </div>
       </div>
