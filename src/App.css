@@ -96,27 +96,42 @@
   padding-bottom: 30px;
 }
 
-.title {
-  font-family: 'Sancreek', cursive;
-  font-weight: bold;
-  color: #51170b;
-  font-size: 8.5vw;
-  margin-block-start: 0em;
-  margin-block-end: 0;
-  text-align: right;
-  padding-right: 15vw;
+.header-container {
+  padding-top: 15vw;
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.year {
-  font-family: 'Sancreek', cursive;
+.title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Cinzel Decorative', cursive;
   font-weight: bold;
-  color: #9a3923;
-  font-size: 14vw;
+  color: #51170b;
+  font-size: 13vw;
   margin-block-start: 0em;
   margin-block-end: 0em;
   text-align: right;
-  padding-right: 33vw;
-  line-height: 0.9;
+  line-height: 1;
+}
+
+.year {
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: bold;
+  color: #9a3923;
+  font-size: 8vw;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  transform: rotate(-90deg);
+  white-space: nowrap;
 }
 
 .dates {
@@ -125,20 +140,42 @@
   font-size: 3.3vw;
   margin-block-start: 0em;
   margin-block-end: 0em;
-  text-align: right;  
-  padding-right: 34vw;
+  text-align: center;
+  padding-right: 10%;
 }
 
 .slide-in-left {
   opacity: 0;
-  transform: translateX(-20%);
   animation: slideInLeft 0.8s forwards;
 }
 
+.slide-in-left.year {
+  transform: translateX(-20%) rotate(-90deg);
+}
+
 @keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+.year.slide-in-left {
+  animation: slideInLeftRotated 0.8s forwards;
+}
+
+@keyframes slideInLeftRotated {
+  from {
+    opacity: 0;
+    transform: translateX(-20%) rotate(-90deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(-90deg);
   }
 }
 
@@ -183,12 +220,138 @@
   margin: 0 auto;
 }
 
+.hh-logo-image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: auto;
+  display: block;
+  opacity: 0;
+}
+
+.hh-logo-image.fade-in-up {
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
 .contacts-banner {
   width: 70vw;      /* 80% of the viewport width */
   height: auto;     /* keeps aspect ratio */
   max-width: 100%;  /* prevents overflow on small screens */
   display: block;
   margin: 0 auto;
+}
+
+.owl-image {
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  transform: rotate(0deg) translateY(-10%);
+  width: 25vw;
+  height: auto;
+  opacity: 0;
+  transform-origin: 48vw top;
+}
+
+.owl-image.fade-in-rotate {
+  animation: fadeInRotate 1.2s ease-out forwards;
+}
+
+@keyframes fadeInRotate {
+  from {
+    opacity: 0;
+    transform: rotate(-45deg) translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg) translateY(-10%);
+  }
+}
+
+.role-text {
+  font-family: 'Merriweather', serif;
+  color: #ecdac2;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.3vw;
+  margin-top: -0.6em;
+}
+
+.role-images-stack {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.role-link {
+  display: block;
+  text-decoration: none;
+  opacity: 0;
+}
+
+.role-link.fade-in-right {
+  animation: fadeInRight 0.6s forwards;
+}
+
+.role-link.fade-in-right:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.role-link.fade-in-right:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.role-link.fade-in-right:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.role-link .role-image,
+.role-link .role-text {
+  transition: transform 0.3s ease, filter 0.3s ease, text-shadow 0.3s ease;
+}
+
+.role-link:hover .role-image {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(251, 162, 117, 0.8));
+}
+
+.role-link:hover .role-text {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(251, 162, 117, 0.8);
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.role-image {
+  width: 15vw;
+  height: auto;
+  display: block;
+  min-width: 80px;
+  max-width: 200px;
 }
 
 /*
