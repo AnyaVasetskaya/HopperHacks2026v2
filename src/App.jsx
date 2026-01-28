@@ -33,8 +33,7 @@ const App = () => {
   }, []);
 
   return (
-    <>
-    {/* <div style={{backgroundImage: `url(${pathsImage})`}} className='background'> */}
+    <div className='background'>
       <Nav />
       {stars.map((star, index) => (
         <Star key={index} left={star.left} top={star.top} size={star.size} />
@@ -66,8 +65,8 @@ const App = () => {
       <div className='footer'>
         <p>Brought to you by Women in Computer Science at Stony Brook University</p>
       </div>
-    {/* </div> */}
-    </>
+    </div>
+
   );
 };
 
