@@ -22,19 +22,19 @@ const Contacts = () => {
       <p className='section-title'>Contacts</p>
       <div className='contacts-container'>
         <img className='contacts-banner' src={contactsBanner} alt="contacts banner"/>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className='contact-icon' style={{left: '15%', top: '25%'}}>
+        <a href="https://www.instagram.com/sbu_wics?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className='contact-icon' style={{left: '15%', top: '25%'}}>
           <InstagramIcon className='icon-svg' color="#51170b" />
         </a>
-        <a href="https://yourwebsite.com" target="_blank" rel="noopener noreferrer" className='contact-icon' style={{left: '32.5%', top: '30%'}}>
+        <a href="https://www3.cs.stonybrook.edu/~wics/pages/index.html" target="_blank" rel="noopener noreferrer" className='contact-icon' style={{left: '32.5%', top: '30%'}}>
           <WebsiteIcon className='icon-svg' color="#51170b" />
         </a>
-        <a href="mailto:your@email.com" className='contact-icon' style={{left: '50%', top: '30%'}}>
+        <a href="mailto:wics@cs.stonybrook.edu" className='contact-icon' style={{left: '50%', top: '30%'}}>
           <EmailIcon className='icon-svg' color="#51170b" />
         </a>
-        <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className='contact-icon' style={{left: '67.5%', top: '30%'}}>
+        <a href="https://discord.gg/MdEruq2sWS" target="_blank" rel="noopener noreferrer" className='contact-icon' style={{left: '67.5%', top: '30%'}}>
           <DiscordIcon className='icon-svg' color="#51170b" />
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className='contact-icon' style={{left: '85%', top: '25%'}}>
+        <a href="https://www.linkedin.com/groups/8543587/" target="_blank" rel="noopener noreferrer" className='contact-icon' style={{left: '85%', top: '25%'}}>
           <LinkedinIcon className='icon-svg' color="#51170b" />
         </a>
       </div>

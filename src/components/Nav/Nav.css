@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 2rem; /* 👈 controls spacing */
+    gap: 2rem;
     padding: 1rem 2rem;
     position: relative;
     z-index: 100;
