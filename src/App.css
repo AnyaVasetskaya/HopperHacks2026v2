@@ -51,6 +51,8 @@
   font-weight: bold;
   text-align: center;
   padding: 3px;
+  position: relative;
+  z-index: 2;
 }
 .pages {
   padding-left: 10vw;
@@ -63,6 +65,104 @@
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
+  position: relative;
+}
+
+.starry-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.starry-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position: top center;
+  opacity: 0;
+}
+
+.starry-1 {
+  animation: starryFade1 15s ease-in-out infinite;
+}
+
+.starry-2 {
+  animation: starryFade2 15s ease-in-out infinite;
+}
+
+.starry-3 {
+  animation: starryFade3 15s ease-in-out infinite;
+}
+
+@keyframes starryFade1 {
+  0% {
+    opacity: 0.5;
+  }
+  26.67% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  93.33% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes starryFade2 {
+  0% {
+    opacity: 0;
+  }
+  26.67% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  53.33% {
+    opacity: 0.5;
+  }
+  66.67% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes starryFade3 {
+  0% {
+    opacity: 0;
+  }
+  53.33% {
+    opacity: 0;
+  }
+  66.67% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  93.33% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .left-images { 
@@ -93,6 +193,8 @@
   flex-direction: column;
   align-items: right;
   padding-bottom: 30px;
+  position: relative;
+  z-index: 2;
 }
 
 .header-container {
@@ -149,6 +251,37 @@
   display: block;
 }
 
+.logo-star {
+  position: absolute;
+  width: 12vw;
+  height: auto;
+  z-index: 5;
+  animation: twinklePulsate 3s ease-in-out infinite;
+}
+
+.logo-star-3 {
+  top: 0%;
+  left: -14%;
+  animation-delay: 0s;
+}
+
+.logo-star-4 {
+  top: 55%;
+  right: 3%;
+  animation-delay: 1.5s;
+}
+
+@keyframes twinklePulsate {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
 .envelope-container {
   display: flex;
   justify-content: center;
@@ -161,8 +294,8 @@
   height: auto;
   display: block;
   transition: transform 0.3s ease;
-  margin-top: 15vh;
   margin-bottom: 8vh;
+  margin-top: 4vh;
 }
 
 .envelope-image:hover {
@@ -272,6 +405,47 @@
   }
   50% {
     transform: translateY(-15px);
+  }
+}
+
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  animation: sparkleAnimation 1s ease-out forwards;
+}
+
+.sparkle::before,
+.sparkle::after {
+  content: '';
+  position: absolute;
+  background: radial-gradient(circle, #ffb649, #fbbd03, transparent);
+  border-radius: 50%;
+}
+
+.sparkle::before {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.sparkle::after {
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+  background: radial-gradient(circle, #ffffff, #ffd700, transparent);
+}
+
+@keyframes sparkleAnimation {
+  0% {
+    opacity: .6;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.5);
   }
 }
 
