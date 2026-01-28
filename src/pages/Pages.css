@@ -92,3 +92,8 @@
 .faq-box:hover {
   transform: scale(1.05);
 }
+
+.lightning {
+  width: 10vw;
+  height: 50px;  
+}

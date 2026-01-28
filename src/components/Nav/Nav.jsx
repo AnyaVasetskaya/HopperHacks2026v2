@@ -4,7 +4,7 @@ import './Nav.css';
 import logoImage from '../../assets/dark_wics_logo.png'
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);

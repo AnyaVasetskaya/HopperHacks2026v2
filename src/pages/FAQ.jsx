@@ -1,7 +1,7 @@
 import React from 'react';
 import './Pages.css';
 import { useState } from 'react';
-import { FaBolt } from 'react-icons/fa';
+import lightning from "../assets/lightning.png"
 
 const faqData = {
   general: [
@@ -127,6 +127,7 @@ const FAQ = () => {
           <h3 className='section-sub-title'>
             {category.charAt(0).toUpperCase() + category.slice(1)}
           </h3>
+          <br />
           <ul style={{ padding: '0 20px' }}>
             {faqData[category].map((faq, index) => (
               <li style={{ listStyleType: 'none', marginBottom: '15px' }} key={index}>
@@ -135,10 +136,10 @@ const FAQ = () => {
                   onClick={() => toggleAnswer(category, index)}
                   style={{
                     cursor: 'pointer',
-                    border: '2px solid #fba275',
+                    border: '2px solid #90a3da',
                     borderRadius: '15px',
                     padding: '15px 20px',
-                    backgroundColor: '#fff',
+                    backgroundColor: '#374986',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
@@ -149,14 +150,13 @@ const FAQ = () => {
                     <div style={{
                       width: '30px',
                       height: '30px',
-                      backgroundColor: '#fba275',
                       borderRadius: '8px',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                       flexShrink: 0
                     }}>
-                      <FaBolt style={{ fontSize: '20px', color: '#51170b' }} />
+                      <img className='lightning' src={lightning} alt="wics logo"/>
                     </div>
                     <strong className='section-text' style={{ textAlign: 'left' }}>
                       {faq.question}
@@ -166,7 +166,8 @@ const FAQ = () => {
                     fontSize: '20px',
                     transform: expandedIndex.category === category && expandedIndex.index === index ? 'rotate(180deg)' : 'rotate(0deg)',
                     transition: 'transform 0.3s ease',
-                    flexShrink: 0
+                    flexShrink: 0,
+                    color: '#90a3da'
                   }}>
                     ▼
                   </div>
@@ -175,7 +176,6 @@ const FAQ = () => {
                   <p
                     style={{
                       padding: '20px',
-                      backgroundColor: '#fba275',
                       borderRadius: '15px',
                       marginTop: '10px',
                     }}
