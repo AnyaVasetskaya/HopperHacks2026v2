@@ -19,6 +19,12 @@ import invitationImage from './assets/invitationUpdated.png'
 import cloud1Image from './assets/cloud 1.png'
 import cloud3Image from './assets/cloud 3.png'
 import logoHopperImage from './assets/logo hopper.PNG'
+import starry1Image from './assets/starry1.png'
+import starry2Image from './assets/starry2.png'
+import starry3Image from './assets/starry3.png'
+import stars3Image from './assets/stars 3.png'
+import stars4Image from './assets/stars 4.png'
+import candleImage from './assets/candle.png'
 
 const stars = [
   { left: 23, top: 8, size: 9 },
@@ -45,8 +51,53 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    // Mouse sparkle trail effect
+    const createSparkle = (x, y) => {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      sparkle.style.left = x + 'px';
+      sparkle.style.top = y + 'px';
+
+      // Random size and rotation
+      const size = Math.random() * 10 + 5;
+      sparkle.style.width = size + 'px';
+      sparkle.style.height = size + 'px';
+      sparkle.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+      document.body.appendChild(sparkle);
+
+      // Remove sparkle after animation
+      setTimeout(() => {
+        sparkle.remove();
+      }, 1000);
+    };
+
+    let lastTime = 0;
+    const throttleDelay = 50; // Create sparkle every 50ms
+
+    const handleMouseMove = (e) => {
+      const currentTime = Date.now();
+      if (currentTime - lastTime >= throttleDelay) {
+        createSparkle(e.clientX, e.clientY);
+        lastTime = currentTime;
+      }
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
   return (
     <div style={{backgroundImage: `url(${bricksImage})`}} className='background'>
+      <div className='starry-background'>
+        <div className='starry-layer starry-1' style={{backgroundImage: `url(${starry1Image})`}}></div>
+        <div className='starry-layer starry-2' style={{backgroundImage: `url(${starry2Image})`}}></div>
+        <div className='starry-layer starry-3' style={{backgroundImage: `url(${starry3Image})`}}></div>
+      </div>
       <Nav />
       {stars.map((star, index) => (
         <Star key={index} left={star.left} top={star.top} size={star.size} />
@@ -59,6 +110,8 @@ const App = () => {
           </div>
           <div className='logo-container'>
             <img className={animate ? 'hh-logo-image fade-in-up' : 'hh-logo-image'} src={logoImage} alt="wics logo"/>
+            <img className='logo-star logo-star-3' src={stars3Image} alt="star 3"/>
+            <img className='logo-star logo-star-4' src={stars4Image} alt="star 4"/>
             <h1 className='dates'>Feb 21-22</h1>
             <a href="https://www3.cs.stonybrook.edu/~wics/pages/index.html" target="_blank" rel="noopener noreferrer">
               <img className='by-wics-image' src={byWicsImage} alt="by WiCS"/>
@@ -82,6 +135,7 @@ const App = () => {
 
         {/* envelope */}
         <div className='envelope-container'>
+          <img className='candle candle-left' src={candleImage} alt="candle"/>
           <img
             className='envelope-image'
             src={envelopeImage}
@@ -89,6 +143,7 @@ const App = () => {
             onClick={() => setShowInvitation(true)}
             style={{ cursor: 'pointer' }}
           />
+          <img className='candle candle-right' src={candleImage} alt="candle"/>
         </div>
 
         {/* Invitation Popup */}
