@@ -1,6 +1,7 @@
 import React from 'react';
 import './Pages.css';
 import { useState } from 'react';
+import { FaBolt } from 'react-icons/fa';
 
 const faqData = {
   general: [
@@ -130,6 +131,7 @@ const FAQ = () => {
             {faqData[category].map((faq, index) => (
               <li style={{ listStyleType: 'none', marginBottom: '15px' }} key={index}>
                 <div
+                  className="faq-box"
                   onClick={() => toggleAnswer(category, index)}
                   style={{
                     cursor: 'pointer',
@@ -154,9 +156,9 @@ const FAQ = () => {
                       justifyContent: 'center',
                       flexShrink: 0
                     }}>
-                      <span style={{ fontSize: '20px' }}>❓</span>
+                      <FaBolt style={{ fontSize: '20px', color: '#51170b' }} />
                     </div>
-                    <strong className='section-text question' style={{ textAlign: 'left' }}>
+                    <strong className='section-text' style={{ textAlign: 'left' }}>
                       {faq.question}
                     </strong>
                   </div>

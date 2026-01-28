@@ -35,9 +35,6 @@
     font-size: 2.3vh;
   }
 
-  .question:hover {
-    font-size: 3.1vh;
-  }
 .section-text {
   font-family: 'Merriweather', serif;
   color: #51170b;
@@ -86,4 +83,12 @@
   min-width: 30px;
   width: 4vw;
   height: auto;
+}
+
+.faq-box {
+  transition: transform 0.2s ease;
+}
+
+.faq-box:hover {
+  transform: scale(1.05);
 }
