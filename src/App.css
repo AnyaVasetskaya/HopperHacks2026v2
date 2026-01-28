@@ -175,6 +175,14 @@
   margin: 0 auto;
 }
 
+.tracks-image {
+  width: 90vw;      /* 80% of the viewport width */
+  height: auto;    /* keeps aspect ratio */
+  max-width: 100%;  /* prevents overflow on small screens */
+  display: block;
+  margin: 0 auto;
+}
+
 .contacts-banner {
   width: 70vw;      /* 80% of the viewport width */
   height: auto;     /* keeps aspect ratio */

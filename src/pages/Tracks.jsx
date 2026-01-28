@@ -6,7 +6,7 @@ const Tracks = () => {
   return (
     <div>
       <p className='section-title'>Tracks</p>
-      <img className='schedule-image' src={tracksImage} alt="wics logo"/>
+      <img className='tracks-image' src={tracksImage} alt="wics logo"/>
 
     </div>
   );

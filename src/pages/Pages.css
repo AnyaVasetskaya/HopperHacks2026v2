@@ -3,7 +3,7 @@
 
 .section-title {
     font-family: 'Cinzel Decorative', serif;
-    color: #51170b;
+    color: #ecdac2;
     font-size: 6vh;
     font-weight: 800;
     margin-block-start: 1em;
@@ -13,7 +13,7 @@
 
   .section-sub-title {
     font-family: 'Merriweather', serif;
-    color: #51170b;
+    color: #ecdac2;
     font-weight: bold;
     text-align: center;
     font-size: 4.7vh;
@@ -21,7 +21,7 @@
 
   .section-tiny-text {
     font-family: 'Merriweather', serif;
-    color: #9a3923;
+    color: #ecdac2;
     font-weight: bold;
     text-align: center;
     font-size: 2.5vh;
@@ -29,7 +29,7 @@
 
   .section-sub-text {
     font-family: 'Merriweather', serif;
-    color: #51170b;
+    color: #ecdac2;
     font-weight: bold;
     text-align: center;
     font-size: 2.3vh;
@@ -37,7 +37,7 @@
 
 .section-text {
   font-family: 'Merriweather', serif;
-  color: #51170b;
+  color: #ecdac2;
   font-weight: bold;
   text-align: center;
   font-size: 3vh;
