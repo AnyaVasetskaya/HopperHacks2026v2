@@ -34,7 +34,7 @@ const Contacts = () => {
         <a href="https://discord.gg/MdEruq2sWS" target="_blank" rel="noopener noreferrer" className='contact-icon' style={{left: '67.5%', top: '30%'}}>
           <DiscordIcon className='icon-svg' color="#51170b" />
         </a>
-        <a href="https://www.linkedin.com/groups/8543587/" target="_blank" rel="noopener noreferrer" className='contact-icon' style={{left: '85%', top: '25%'}}>
+        <a href="https://www.linkedin.com/company/sbu-wics" target="_blank" rel="noopener noreferrer" className='contact-icon' style={{left: '85%', top: '25%'}}>
           <LinkedinIcon className='icon-svg' color="#51170b" />
         </a>
       </div>
